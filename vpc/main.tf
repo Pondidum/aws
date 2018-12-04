@@ -15,6 +15,14 @@ module "vpc" {
   enable_nat_gateway = true
   single_nat_gateway = true
 
+  private_subnet_tags = {
+    Type = "private"
+  }
+
+  public_subnet_tags = {
+    Type = "public"
+  }
+
   vpc_tags = {
     Name = "account-vpc"
   }
